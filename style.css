@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav{
+
+    background-color: #4b0a4b;
+    color: whitesmoke;
+    height: 69px;
+    display: flex;
+    font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+    align-items: center;
+  text-align: center;
+ padding: 0 6px;
+}
+
+
+nav ul{
+  list-style-type: none;
+}
+
+.gameContainer{
+/*   background-color: blueviolet; */
+display: flex;
+justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+
+}
+.Container{
+  display: grid;
+  grid-template-columns:  repeat(3,10vw);
+  grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+  border: 2px solid black;
+  font-size:8vw ;
+  cursor: pointer;
+}
+.box:hover{
+  background-color:#e6c1e6;
+}
+.info{
+  font-size: 25px;
+}
+.gameinfo{
+  padding: 0 34px;
+  font-family: 'Aboreto', cursive;
+}
+.gameinfo h1{
+  font-size: 2.5rem;
+}
+.imgbox img{
+  transition:width 1s ease-in-out;
+  width: 0;
+}
+
+/*utility classes  */
+.br-0{
+ border-right:0 ;
+}
+.bl-0{
+  border-left: 0;
+}
+.bt-0{
+ border-top:0 ;
+}
+.bb-0{
+  border-bottom: 0;
+}
+#reset{
+margin: 0 30px;
+    padding: 10 14px;
+    background: #ddd0dd;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Aboreto', cursive;
+}
+
+@media media-type and (max-width:950px)
+{
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 34px;
+  }
+  .gameinfo h1{
+    font-size:1.5rem ;
+  }
+  .Container{
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3,20vw);
+  }
+}
+
+@media media-type and (max-width:650px)
+{
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 50px;
+  }
+  .gameinfo h1{
+    font-size:1rem ;
+  }
+  .Container{
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(4,25vw);
+  }
+}
+@media media-type and (max-width:450px)
+{
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 60px;
+  }
+  .gameinfo h1{
+    font-size:.5rem ;
+  }
+  .Container{
+    display: grid;
+    grid-template-columns: repeat(5, 30vw);
+    grid-template-rows: repeat(5,30vw);
+
+  }
+}
+@media media-type and (max-width:350px)
+{
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 60px;
+  }
+  .gameinfo h1{
+    font-size:.3rem ;
+  }
+  .Container{
+    display: grid;
+    grid-template-columns: repeat(6, 35vw);
+    grid-template-rows: repeat(6,35vw);
+  }
+}
